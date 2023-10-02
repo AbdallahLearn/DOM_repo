@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .color-selector {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .color-box1 , .color-box2 , .color-box3 {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+            border: 4px solid #070707;
+            cursor: pointer;
+        }
+        .color-box1{
+            background:lightblue;
+        }
+        .color-box2{
+            background:lightgreen;
+        }
+        .color-box3{
+            background:lightpink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Change Background Color</h1>
+
+    <div class="color-selector">
+        <div class="color-box1" id="colorBox1"></div>
+        <div class="color-box2" id="colorBox2"></div>
+        <div class="color-box3" id="colorBox3"></div>
+    </div>
+
+    <script>
+        // Get color boxes by their IDs
+        const colorBox1 = document.getElementById('colorBox1');
+        const colorBox2 = document.getElementById('colorBox2');
+        const colorBox3 = document.getElementById('colorBox3');
+
+        // Add click event listeners to color boxes
+        colorBox1.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightblue';
+        });
+
+        colorBox2.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightgreen';
+        });
+
+        colorBox3.addEventListener('click', function () {
+            document.body.style.backgroundColor = 'lightpink';
+        });
+    </script>
+</body>
+
+</html>
